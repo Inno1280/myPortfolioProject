@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+
+    body{
+      display: grid;
+      justify-content: center;
+
+    }
+
+    .container{
+      display: grid;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+      gap: 9px;
+      height: 748px;
+      width: 748px;
+      background-color: #232629;
+      justify-content: center;
+      
+       
+      
+    }
+
+    .redbox{
+      background-color: #E72F24; 
+    }
+
+    .item-2{
+      grid-area: 1 / 2 / 2 / 5;
+    }
+
+    .item-3{
+      grid-area: 2 / 1 / 4 / 2; 
+    }
+
+    .item-4{
+      grid-area: 2 / 2 / 4 / 4;  
+    }
+
+    .item-9{
+      grid-area: 3 / 4 / 5 / 5;
+    }
+
+    .biegebox{
+      background-color: #F0F1EC;
+    }
+
+    .bluebox{
+      background-color: #004592;
+    }
+
+    .yellowbox{
+      background-color:  #F9D01E;
+      order: 1;
+    }
+
+    .blackbox{
+      background-color: rgb(82, 82, 82);
+      order: 2;
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondrian Project</title>
+  </head>
+  <body>
+    <div class="main-grid container">
+      <div class="item-1 redbox"></div>
+      <div class="item-2 biegebox"></div>
+      <div class="item-3 biegebox"></div>
+      <div class="item-4 biegebox"></div>
+      <div class="item-5 bluebox"></div>
+      <div class="item-6 biegebox"></div>
+      <div class="item-7 yellowbox"></div>
+      <div class="item-8 blackbox"></div>
+      <div class="item-9 biegebox"></div>
+    </div>
+  </body>
+  </html>
+</body>
+
+</html>
