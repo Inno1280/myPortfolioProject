@@ -1,0 +1,188 @@
+body {
+    font-family: "Poppins", sans-serif;
+    
+    background-color: #3aaf59;
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+  }
+
+  .heading{
+    flex: 1;
+    margin: 0px;
+    width: 100%;
+  }
+
+  h1{
+    color: white;
+    font-size: 5rem;
+    font-weight: 800;
+    width: 70%;
+    margin-top: 150px;
+   
+    z-index: 1;
+  }
+
+  p{
+    font-size: 14px;
+    text-align: justify;
+    
+  }
+
+  li{
+    list-style: none;
+  }
+
+  #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px;
+    
+
+    margin: 0px;
+    width: 100%;
+    background-color: black;
+  
+  }
+
+  .contents{
+ 
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .links{
+
+    font-size: 16px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    
+    
+  }
+
+  .links > li >a {
+    color: orangered;
+    text-decoration: none;
+    
+  }
+
+  .links >li >a:hover {
+    color: #3aaf59;
+
+  }
+
+  .links > *{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    color: green;
+    list-style: none;
+
+
+  }
+
+  
+
+  .hero-section{
+    margin: 0px;
+    
+  
+  }
+
+  .hero{
+    border: 4px solid white;
+    border-radius: 40px;
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    right: 20px;
+    z-index: -1;
+
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .webdev{
+    border-radius: 24px;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .ux{
+    border-radius: 24px;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .web-tile, .ux-tile{
+    
+    margin-top: 50px;
+    width: 650px;
+
+    color: white;}
+    
+    
+  
+
+  .expertise{
+    font-size: 32px;
+    font-weight: 500;
+    border-radius: 24px;
+    width: 50%;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+  }
+
+  footer {
+    background-color: black;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    
+  
+  }
+
+  @media (max-width:600px) {.cards{
+    display: block;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .ux .webdev{
+    width: 100%;
+  }
+
+  .web-tile .ux-tile{
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+    
+  }
+
+  
+
+  

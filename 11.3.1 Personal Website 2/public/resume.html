@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title> 
+
+    <style>
+        body{
+        margin: 0px;  
+        
+
+    }
+
+    .navbar{
+        margin: 0px !important; 
+    }
+
+    .links ul {
+    list-style: none; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+    padding: 8px;  
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+} 
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    height: 70px;   
+    margin: 0px 0px 0px 0px !important; 
+    
+}
+
+.link-item > * {  
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-left: 16px; 
+    padding-bottom: 8px;
+    font-family: poppins; 
+    font-weight: 200; 
+    
+}
+
+.link-item > *:hover{
+    background-color: whitesmoke;
+    color: #000000; 
+    border-radius: 16px; 
+}
+
+/* Header section styling */
+
+.header-section{
+    display: flex;
+     
+    gap: 0px;   
+    
+    margin: 50px 100px 0px 100px;   
+    border-left: 20px solid;  
+    border-right: 20px solid; 
+    
+     
+}
+
+.name-section{
+    display: flex;
+    width: 70%;  
+    border-right: 10px solid;  
+    border-top: 2px solid; 
+    border-bottom: 2px solid; 
+    
+    align-items: center; 
+} 
+
+.name {
+    font-family: chonburi; 
+    font-size: 3.5rem;   
+    text-align: center;
+    padding-left: 30px; 
+    margin-bottom: 0px;
+}
+
+.name-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.job-title{
+    font-family: poppins;
+    font-size: 1.5rem; 
+    font-style: italic;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.profile-pics{
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+.address, .phone, .email{
+    display: flex;  
+    padding-top: 0px;   
+    
+    padding-top: 0px; 
+    gap: 10px; 
+    align-items: center;
+}
+.address-text, .phone-no, .email-text{
+    padding-top: 0px;  
+    font-family: poppins; 
+    font-size: 1.2rem;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    border-bottom: 2px solid;  
+    padding-left: 10px; 
+    border-left: 10px solid;  
+    border-top: 2px solid; 
+}
+
+
+/* resume details styling */
+
+.resume-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    border: 0.5px solid gray;
+    margin-left: 100px;
+    margin-right: 100px; 
+    gap: 50px;  
+    background-color: whitesmoke; 
+    padding: 50px; 
+}
+
+.right-side{
+border-left: 2px solid;
+padding-left: 50px;  
+}
+
+h3, h4{
+    font-family: chonburi;  
+}
+
+p, li{
+    font-family: poppins; 
+    text-align: justify; 
+} 
+
+/* abilities */
+
+.abilities > * {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    width: 100%;  
+}
+
+.multi-container, .problem-container, .team-container, .comm-container{
+    justify-content: space-between; 
+    height: 30px;    
+   
+}   
+
+.multi-container{
+    padding: 0px; 
+}
+
+.stars-container{
+    display: flex;
+    
+    gap: 50px;  
+}
+
+
+/* skills section */
+.software-icons{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    
+    align-items: center;
+    justify-content: space-between;  
+    gap: 20px;   
+    margin-top: 0px;     
+}
+
+.technical, .soft-skills{
+    margin-bottom: 0px;
+}
+
+
+
+/* interests section */
+.interests{
+    margin-top: 50px;  
+}
+
+.interest-icons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: flex-start; 
+    padding: 0px; 
+    gap: 70px;     
+     
+} 
+
+.games, .travel, .exercise, .music{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+   
+      
+} 
+
+/* experience section */
+.experience-list, li{ 
+    padding-left: 10px;    
+}
+
+.duration{
+    color: blueviolet;
+}
+
+
+/* Reference section */
+.reference-container{
+    display: grid;
+    gap: 20px; 
+    border: 2px solid;
+     
+    border-top: 8px solid; 
+    
+    background-color: whitesmoke; 
+    padding: 0px 50px 50px 50px; 
+    margin-left: 100px; 
+    margin-right: 100px;  
+    margin-bottom: 30px;  
+}
+
+.references{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    justify-items: center; 
+} 
+
+.section-title{
+      
+    display: flex;
+    border-bottom: 8px solid black;   
+    color: orangered; 
+    
+}
+
+/* CAT buttons */
+.jpeg, .pdf{
+    width: 20rem; 
+    height: 4rem;   
+    border-radius: 16px;  
+    border-color: blue; 
+    font-family: poppins; 
+    font-size: 1.2rem;   
+    background-color: blue;
+    color: whitesmoke;      
+}
+
+.cat-buttons{
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+
+    </style>
+
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<body>
+    <!-- Navbar -->
+   <div class="navbar container" style="margin-right: 0px; margin-left: 0px;">
+        <a href="../index.html"  ><img src="../assets/images/logo.png" alt="logo" height="70" style="margin-left: 20px;"></a>
+        <div class="links">
+             <ul class="link-item">
+                
+                <li><a href="./about me.html">About Me</a> </li>
+                <li class="resume" style="border-bottom: 4px solid;">Resume</li>
+                <li>Portfolio</li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>  
+    </div> 
+
+    <!-- Header section -->
+    <div class="header-section">
+
+        <!-- Name section -->
+        <div class="name-section">
+           <img class="profile-pics" src="../assets/images/me2.jpg" height="150" width="150"         alt="profile-pics">
+           <div class="name-title">
+                <h1 class="name">INNOCENT NWEKE</h1>   
+            <p class="job-title">Architect & Full-Stack Developer</p>
+           </div>
+            
+        </div>
+
+        <!-- Contact details section -->
+        <div class="contact-details">
+            <div class="address">
+                <img class="address-icon" src="../assets/images/geo-alt-fill.svg" alt="address-icon" height="
+                25"> 
+                <p class="address-text">Asaba, Delta State, Nigeria</p>
+            </div>
+
+            <div class="phone">
+                <img class="phone-icon" src="../assets/images/telephone-fill.svg" alt="phone-icon" height="25">  
+                <p class="phone-no">+234 810 597 7953</p>
+            </div>
+
+            <div class="email">
+                <img class="email-icon" src="../assets/images/envelope-at-fill.svg" alt="email-icon" height="25"> 
+                <p class="email-text">nweke_innocent05@yahoo.com</p> 
+            </div>
+        </div>
+          
+    </div>
+
+    <!-- Details section -->
+    <div class="resume-details">
+
+        
+        <!-- left hand side details -->
+        <div class="left-side">
+
+            <!-- profile section -->
+            <div class="profile">
+                <h3 class="profile-title section-title">PROFILE</h3>
+                <p class="profile-text" style="text-align: justify;">Creative and detail-oriented UX designer with a background in architecture and a current role as a Fiber Optics Engineer in a telecom company. Skilled in blending aesthetics with functionality to create seamless and delightful user experiences. Adept at bridging the gap between technical intricacies and human-centric design, I am on a mission to innovate with purpose.</p> 
+            </div>
+
+            <!-- education section -->
+            <div class="education">
+                <h3 class="section-title">EDUCATION</h3>
+                <h4 class="college-degree" style="margin-bottom: 0px;">
+                    Bachelor of Technology (B.Tech) - 2016
+                </h4>
+                <p  class="college-name" style="margin: 5px; margin-left: 0px">Federal University of Technology, Akure (FUTA)</p>   
+                <ul style="margin-top: 5px">
+                    <li class="degree">2nd Class Upper</li>
+                </ul> 
+            </div>
+
+            <!-- abilities section -->
+            <div class="abilities">
+                <h3 class="ability-title section-title">ABILITIES</h3>
+
+                <div class="multi-container">
+                    <p class="multi">Multi-tasking</p>
+                    <div class="stars-container">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg"> 
+                        
+
+
+                    </div>
+                    
+                </div>
+                
+                <div class="problem-container">
+                    <p class="problem">Problem-Solving</p>
+                    <div class="stars-container">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-half.svg"> 
+                        
+
+
+                    </div>
+                </div>
+
+                <div class="team-container">
+                   <p class="team">Team-Leadership</p> 
+                    <div class="stars-container">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-fill.svg">
+                        <img class="stars" src="../assets/images/star-half.svg"> 
+                        
+
+
+                    </div>  
+                </div>
+
+                <div class="comm-container">
+                    <p class="communications">Communication</p> 
+                    <div class="stars-container">
+                         <img class="stars" src="../assets/images/star-fill.svg">
+                         <img class="stars" src="../assets/images/star-fill.svg">
+                         <img class="stars" src="../assets/images/star-fill.svg">
+                         <img class="stars" src="../assets/images/star-fill.svg">
+                         <img class="stars" src="../assets/images/star-half.svg"> 
+                         
+ 
+ 
+                     </div> 
+                </div> 
+
+            </div>
+
+            <!-- skills section -->
+            <div class="skills">
+                <h3 class="skills-title section-title">SKILLS</h3>
+                <div class="technical">
+                    <h4 class="technical">Technical</h4>
+                    <ul class="tech-skills">
+                        <li>Fiber Optics Engineering</li>
+                        <li>Telecomm. Infrastructure maintenance</li>
+                        <li>Optical Network Assurance</li>
+                        <li>User Interface (UI) Design</li>
+                        <li>User Experience (UX) Research</li>
+                        <li>Interaction Design</li>
+                        <li>Information Architecture</li>
+                    </ul>
+
+                    <div class="software">
+                        <h4 class="soft-skills">Software Skills</h4>
+                        <div class="software-icons">
+                            <img src="../assets/images/autodesk-revit.svg" alt="revit logo" height="70">  
+                            
+                            <img src="../assets/images/3ds-max-full.svg" alt="3dsmax logo" height="35">    
+
+                            <img src="../assets/images/AutoCAD.png" alt="AutoCAD logo" height="70">  
+
+                            <img src="../assets/images/corona.png" alt="corona logo" height="30"> 
+                            
+                            <img src="../assets/images/figma.svg" alt="figma logo" height="35"> 
+
+                            <img src="../assets/images/html.svg" alt="html logo" height="40">  
+
+                            <img src="../assets/images/css.svg" alt="css logo" height="40">    
+
+                            <img src="../assets/images/PS.svg" alt="photoshop logo" height="35">  
+
+                            <img src="../assets/images/Ai.svg" alt="illustrator logo" height="35"> 
+
+                            <img src="../assets/images/indesign-cc.svg" alt="indesign logo" height="35">    
+
+
+                        </div>
+                </div>
+            </div>
+
+
+                
+
+                    
+
+            </div>
+            
+            <!-- Interests and Hobbies -->
+            <div class="interests">
+                <h3 class="interest-title section-title">INTERESTS</h3>
+                <div class="interest-icons">
+                    <div class="music">
+                        <img class="music-icon" src="../assets/images/Music.svg" height="35"> 
+                        <p style="margin-top: 5px;">Music</p>  
+                    </div>  
+
+                    <div class="exercise">
+                        <img src="../assets/images/Exercise.svg" height="35"> 
+                        <p style="margin-top: 5px;">Exercise</p>
+                    </div> 
+
+                    <div class="travel">
+                        <img src="../assets/images/travel.svg" height="35"> 
+                        <p style="margin-top: 5px;">Traveling</p>
+                    </div>   
+
+                    <div class="games">
+                        <img src="../assets/images/gaming.svg" height="35"> 
+                        <p style="margin-top: 5px;">Video Games</p>    
+                    </div>
+                    
+                </div>
+            </div> 
+
+            <!-- certifications -->
+            <div class="certifications">
+                <h3 class="cert-title section-title">CERTIFICATIONS</h3> 
+                <ol class="certs">
+                    <li>Google UX Course Specialization</li>
+                        <ul class="cert-company">
+                            <li style="color: blueviolet;">Google Inc. - 2023</li>
+                        </ul>
+
+                        <li>Advanced level Proficiency in FIgma</li>
+                        <ul class="cert-company">
+                            <li style="color: blueviolet;">Udemy - 2023</li>
+                        </ul>
+
+                        <li>Certified Fibre Optics Technician (CFOT) certifications 1 & II</li>
+                        <ul class="cert-company">
+                            <li style="color: blueviolet;">The Fibre Optics Association - 2024</li>
+                        </ul>
+
+                        <li>Project Management Professional
+                        certifications (PMP-G, PMP-P, Quality
+                        management)</li>
+                        <ul class="cert-company">
+                            <li style="color: blueviolet;">British PMA - 2017</li>
+                        </ul>
+
+                        <li>Health, Safety & Environment (HSE)
+                        certifications</li>
+                        <ul class="cert-company">
+                            <li style="color: blueviolet;">The UKHSE - 2017</li>
+                        </ul>
+                </ol>
+            </div>
+
+            
+        </div>
+
+        <!-- right hand side details -->
+        <div class="right-side">
+            <div class="experience">
+                <h3 class="experience section-title">EXPERIENCES</h3>
+
+                <ol class="experience-list">
+                    <li class="experience1">
+                        <div class="company1">
+                    
+                        <div class="comp1">
+                        <h4 class="position" style="margin-bottom: 0px;">UX Designer - Google Inc, San Francisco, USA</h4> 
+                        <p class="duration" style="margin-top: 5px">May 2024 - Present.</p> 
+                        </div>
+                        <p class="res-title">Resposibilities include:</p>
+                        <ul class="responsibilities">
+                        <li>Led the design and implementation of user-centric interfaces for the Baskett App project.</li>
+                        <li>Perform precise splicing and termination of fiber optic cables, ensuring proper alignment and testing for optimal signal transmission.</li>
+                        <li>Maintain detailed records of maintenance activities, create reports on network performance, and provide recommendations for improvements.</li>
+                        <li>Collaborate with cross-functional teams, including network engineers and project managers, providing technical expertise and support for projects.</li>
+                        
+
+
+                        </div>
+
+                    </li>
+
+
+                    <li class="experience2">
+                        <div class="company2">
+                    <div class="comp2">
+                        <h4 class="position" style="margin-bottom: 0px;">Fiber Optics Assurance Engineer - (AllStreams Energy Ltd), Lagos, Nigeria.</h4>
+                        <p class="duration" style="margin-top: 5px">April 2023 - May 2024.</p>
+                    </div>
+                    <p class="res-title">Resposibilities include:</p>
+                    <ul class="responsibilities">
+                        <li>Conduct routine inspections and maintenance of fiber optic networks, promptly identifying and resolving issues to ensure optimal performance.
+                        </li>
+                        <li>Perform precise splicing and termination of fiber optic cables, ensuring proper alignment and testing for optimal signal transmission.
+                        </li>
+                        <li>Maintain detailed records of maintenance activities, create reports on network performance, and provide recommendations for improvements.
+                        </li>
+                        <li>Collaborate with cross-functional teams, including network engineers and project managers, providing technical expertise and support for projects.
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                    </li>
+
+                    <li>
+                       <div class="company3">
+                    <div class="comp3">
+                        <h4 class="position" style="margin-bottom: 0px;">Project Architect -  (DesignSeed Ltd), Lagos, Nigeria.</h4> 
+                        <p class="duration" style="margin-top: 5px">January 2023 - till date.</p> 
+                    </div>
+                    <p class="res-title">Resposibilities include:</p>
+                    <ul class="responsibilities">
+                        <li>Conducted relevant research and case studies on different types of projects, to arrive at a suitable concept design.</li>
+                        <li>Responsible for leading a 4 man design team in generating 2D & 3D visualizations for various project types.</li>
+                        <li>Responsible for collaborating with contractors and building materials supplier to validate the materials schedule and specifications.</li>
+                        <li>Designed the interiors of a residential building in the United kingdom and was also responsible for procuring all the furnitures/ accessories for all spaces.</li>
+                        <li>Collaborated with a 5 man design team to create a proposal for a cinema project.</li>
+                        
+                    </ul>
+
+                </div>     
+                    </li>
+                </ol>
+                
+
+                
+
+                
+            </div>
+
+            
+        </div> 
+
+    </div>
+
+    <!-- reference section -->
+    <div class="reference-container">
+        <h3 class="section-title" style="justify-self: center; ">REFERENCES</h3> 
+        <div class="references"> 
+        
+            <div class="architect">
+                <h4 class="ref-name" style="color: orangered; margin: 0px;">Kenneth Anaba</h4>   
+                <b><p class="ref-position" style="margin-top: 5px; margin-bottom: 0px;">Architect</p></b>
+                <p class="ref-company" style="margin-top: 0px; margin-bottom: 0px;">Opulent Spaces, Ejigbo, Lagos</p>
+                <p class="ref-phone" style="margin-top: 0px;">+234 000 000 0000</p>  
+            </div>
+    
+            <div class="fibre">
+                <h4 class="ref-name" style="color: orangered; margin: 0px;">Pius Ikechukwu</h4> 
+                <b><p class="ref-position" style="margin-top: 5px; margin-bottom: 0px;">Fibre-Optics Engineer</p></b> 
+                <p class="ref-company" style="margin-top: 0px; margin-bottom: 0px;" >Huawei Technologies Ltd, Lagos</p>
+                <p class="ref-phone" style="margin-top: 0px;">+234 000 000 0000</p> 
+            </div>
+    
+            <div class="food">
+                <h4 class="ref-name" style="color: orangered; margin: 0px;">Daniel Oladayo</h4>  
+                <b><p class="ref-position" style="margin-top: 5px; margin-bottom: 0px;">Food & Beverages Manager</p></b>  
+                <p class="ref-company" style="margin-top: 0px; margin-bottom: 0px;">Omega Restaurants</p>
+                <p class="ref-phone" style="margin-top: 0px;">+971 00 000 000 0000</p>    
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="cat-buttons">
+        <button class="jpeg">Download jpeg</button>
+
+        <button class="pdf">Download PDF</button>
+        
+    </div>
+    
+    
+
+
+</body>
+</html>

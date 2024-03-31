@@ -1,0 +1,189 @@
+
+body{
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+    height: 100vh;
+
+}
+
+
+
+.black{
+    background-color: black;
+}
+
+.grey{
+    background-color: rgb(157, 141, 141);
+}
+
+.white-smoke{
+    background-color: whitesmoke;
+}
+
+.yellow{
+    background-color: yellow;
+
+}
+
+.purple{
+    background-color: purple;
+}
+
+.red{
+    background-color: red;
+    
+}
+
+
+
+
+.frame{
+    background-color: black;
+    border: 16px solid rgb(217, 181, 115);
+    border-radius: 16px;
+    padding: 4px grey; 
+    
+    display: grid;
+
+    grid-template-columns: 0.33fr 0.67fr 1fr 1.5fr 1.5fr 0.33fr 0.33fr;
+    grid-template-rows: 0.2fr 0.67fr 0.33fr 1fr 0.67fr 0.67fr 0.67fr 0.33fr 0.33fr 0.25fr;
+    grid-gap: 4px; 
+    width: 650px;
+    height: 600px; 
+}
+
+.frame > * {
+    color: #00000000; 
+}
+
+/*black box*/
+.item-1{
+     
+    grid-area: 1 / 1 / 4 / 2;  
+}
+
+/*grey box*/
+.item-2{
+    grid-area: 1 / 2 / 2 / 4; 
+}
+
+/*white-smoke box*/
+.item-3{
+    grid-area: 1 / 4 /3 / 5;
+}
+
+/*grey box*/
+.item-4{
+    grid-area: 1 / 5 / 3 / 6;
+}
+
+/*yellow box*/
+.item-5{
+    grid-area: 1 / 6 / 4 / 8;  
+}
+
+/*red box*/
+.item-6{
+    grid-area: 2 / 2 / 4 / 3;
+}
+
+/*white-smoke box*/
+.item-7{
+    grid-area: 2 / 3 / 4 / 4; 
+}
+
+/*yellow box*/
+.item-8{
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+/*purple box*/
+.item-9{
+    grid-area: 3 / 5 / 4 / 6; 
+}
+
+/*white-smoke box*/
+.item-10{
+    grid-area: 4 / 1 / 6 / 2; 
+}
+
+.item-11{
+    grid-area: 4 / 2 / 5 / 4; 
+}
+
+.item-12{
+    grid-area: 4 / 4 / 5 / 5; 
+}
+
+.item-13{
+    grid-area: 4 / 5 / 5 / 6; 
+}
+
+.item-14{
+    grid-area: 4 / 6 / 7 / 7;  
+}
+
+.item-15{
+    grid-area: 4 / 7 / 7 / 8; 
+}
+
+.item-16{
+    grid-area: 5 / 2 / 6 / 4;  
+}
+
+.item-17{
+    grid-area: 5 / 4 / 6 / 5; 
+}
+
+.item-18{
+    grid-area: 5 / 5 / 7 / 6; 
+}
+
+.item-19{
+    grid-area: 6 / 1 / 8 / 3; 
+}
+
+.item-20{
+    grid-area: 6 / 3 / 9 / 4; 
+}
+
+.item-21{
+    grid-area: 6 / 4 / 7 / 5; 
+}
+
+.item-22{
+    background-color: aq;
+    grid-area: 5 / 5 / 7 / 6;  
+}
+
+.item-23{
+    grid-area: 7 / 5 / 9 / 6;   
+}
+
+.item-24{
+    grid-area: 7 / 6 / 11 / 8;   
+}
+
+.item-25{
+    grid-area: 8 / 1 / 11 / 3; 
+}
+
+.item-26{
+    grid-area: 7 / 4 / 9 / 5;  
+}
+
+.item-27{
+    background-color: blue; 
+    grid-area: 9 / 3 / 11 / 6;  
+
+}
+
+.item-28{
+    grid-area: 9 / 5 / 11 / 6; 
+}
+
+ 
+
+
+
