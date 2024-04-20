@@ -1,21 +1,35 @@
 
+
+*, body{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 body{
     flex: 1; 
-    flex-direction: column;
-    background-color: #151515;
+    background-color: #1f1f1f;
     height: 100vh;
     margin: 0px; 
-    align-items: center; 
+    align-items: center;
+    padding: 0px;  
     
 }
 
-.links ul {
+nav{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links > ul {
     list-style: none; 
     display: flex;
     gap: 20px;
     margin: 0px;
     padding: 8px; 
-    
+    font-weight: bold;  
 }
 a{
     text-decoration: none;
@@ -40,16 +54,28 @@ a{
     padding-left: 16px; 
     padding-bottom: 8px;
     font-family: poppins; 
-    font-weight: 200; 
+    font-weight: 500; 
     
 }
 
 .link-item > *:hover{
     background-color: whitesmoke;
+    font-size: large;
     color: #000000; 
-    border-radius: 16px; 
+    border-radius: 16px;
+    transition: .3s ease-in-out;  
 }
 
+/* styling the hamburger menu */
+.hamburger{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    display: none;
+}
+
+
+/* Styling the other side of the website */
 .hero{
     display: flex;
     margin-top: 100px; 
@@ -98,7 +124,7 @@ a{
 }  
 
 .photo{
-    border: 10px solid #151515; 
+    border: 10px solid #1f1f1f1f; 
     border-radius: 50%; 
     opacity: 50%; 
  
@@ -122,60 +148,136 @@ a{
     background-color: blue;
 }
 
+footer{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 32px; 
+    border-top: 1px solid grey;
+    padding: 16px;  
+    font-family: poppins;
+    font-weight: 200; 
+    font-size: 16px;
+}
 
-@media(max-width: 800px){
+
+@media(min-width: 368px) and (max-width: 1080px){
+
+    body{
+        margin: 8px; 
+    }
     .hero{
-        flex-direction: column;
+        
+        display: flex;
+        flex-direction: column; 
+        margin: 8px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px; 
+    }
 
+
+    /* The hamburger menu styling */
+    .hamburger{
+        display: flex;
+        cursor: pointer;
+    
+    }
+
+    .navbar{
+        border-bottom: 0.1px solid grey; 
+    }
+
+    .hamburger #closeHam{
+        display: none;
+    }
+
+    #navigation-items {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: #000000;
+        width: 100%; 
+        height: calc(100vh - 60px);
+        padding-top: 60px;
+        gap: 5vh
+        ;
+        z-index: 1;
+        
+    }
+
+    
+
+    #navigation-items >*:hover{
+        
+        background-color: whitesmoke;  
+        padding: 8px 100% 8px 100%;   
+        border-radius: 8px;
+        text-wrap: nowrap; 
     }
 
     .tag-copy{
+        display: flex;
+        flex-direction: column;
         width: 100%;
         order: 1;
-    }
-
-    .container{
-        display: flex;
-        width: 100%;
-        margin: 0;
-    }
-
-    .links ul {
-        list-style: none; 
-        display: flex;
-        justify-content: space-around; 
-        gap: 5px;
+        padding: 0px; 
         margin: 0px;
-        padding: 8px; 
-}
+        
+    }
 
-.link-item > * {  
-    padding-top: 4px;
-    padding-right: 8px; 
-    padding-left: 8px; 
-    padding-bottom: 4px;
-    font-family: poppins; 
-    font-weight: 200; 
+    
+
+    
+
+    
+
+    .logo-image{ 
+    padding: 0px; 
+     
+    margin: 0px;
+    height: 50px;
+     
     
 }
 
-.photo{
-    height: 450px;
-    width: 400px;    
-}
+    .photo{
+    height: 200px;
+    width: 200px;   
+    z-index: 0; 
+    }
 
 .headline{
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: justify; 
 }
 
 .greetings{
-    font-size: 2rem !important;  
+    font-size: 1.6rem !important;  
+    text-align: justify;
+   
 }
 
 .primary{
-    width: 200px;
-    height: 70px;  
-    font-size: 1.5rem;    
+    width: 100%;
+    height: 60px;  
+    font-size: 1.5rem;   
+   
+}
+
+footer{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 32px; 
+    border-top: 1px solid grey;
+    padding: 8px;  
+    font-family: poppins;
+    font-weight: 100; 
+    font-size: 12px;
 }
 }
 

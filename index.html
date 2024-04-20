@@ -20,18 +20,31 @@
 
     <!-- Header section: Containing the Nav Bar -->
 
-    <div class="navbar container">
-        <img src="./assets/images/logo.png" alt="logo" height="70" style="margin-left: 20px;">  
-        <div class="links">
-             <ul class="link-item">
+    <header class="navbar container">
+        <nav>
+            <div class="logo-container">
+               <img class="logo-image" src="./assets/images/logo.png" alt="logo" height="70">   
+            </div>
+
+            <div class="navigation-items links" >
+            <ul class="link-item" id="navigation-items">
                 
                 <li><a href="./public/about me.html">About Me</a> </li>
                 <li><a href="./public/resume.html">Resume</a> </li>
                 <li>Portfolio</li>
                 <li><a href="./public/contact.html">Contact</a></li>
             </ul>
-        </div>  
-    </div>
+            </div> 
+
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+
+        </nav>
+        
+         
+    </header> 
 
 
     <!-- Hero section: containing the Hero Image and stuffs -->
@@ -50,7 +63,7 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer>Copyright &copy; 2024</footer>
+    <script src="./index.js"></script>
 </body>
 </html>
