@@ -12,19 +12,37 @@
 
     }
 
-    .navbar{
-        margin: 0px !important; 
+    .navbar-container{ 
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        max-width: 1400px; 
+    }
+
+    
+
+    .logo{
+        margin: 0 0 0 80px;  
     }
 
     .links ul {
     list-style: none; 
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     margin: 0px;
     padding: 8px;  
-    
 }
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
 
 a{
     text-decoration: none;
@@ -57,6 +75,9 @@ a{
     background-color: whitesmoke;
     color: #000000; 
     border-radius: 16px; 
+    font-size: large; 
+    font-weight: 500;   
+    transition: 0.4s ease-in-out; 
 }
 
 /* Header section styling */
@@ -71,6 +92,14 @@ a{
     border-right: 20px solid; 
     
      
+}
+
+/* Hamburger MENU */
+.hamburger{
+    color: whitesmoke;
+    display: flex;
+    font-weight: 800;
+    font-size-adjust: 20px; 
 }
 
 .name-section{
@@ -193,11 +222,19 @@ p, li{
 .software-icons{
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
-    
     align-items: center;
     justify-content: space-between;  
     gap: 20px;   
     margin-top: 0px;     
+}
+
+.autocad{ 
+    grid-area: 1 / 2 / 2 / 3; 
+    
+}
+
+.corona{
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 .technical, .soft-skills{
@@ -240,11 +277,12 @@ p, li{
 
 /* Reference section */
 .reference-container{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px; 
     border: 2px solid;
      
-    border-top: 8px solid; 
+    border-top: 0;
     
     background-color: whitesmoke; 
     padding: 0px 50px 50px 50px; 
@@ -254,8 +292,8 @@ p, li{
 }
 
 .references{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
+    display: flex;
+    justify-content: space-between;  
     justify-items: center; 
 } 
 
@@ -268,7 +306,7 @@ p, li{
 }
 
 /* CAT buttons */
-.jpeg, .pdf{
+ .pdf{
     width: 20rem; 
     height: 4rem;   
     border-radius: 16px;  
@@ -279,10 +317,31 @@ p, li{
     color: whitesmoke;      
 }
 
+.jpeg{
+    width: 20rem;
+    height: 4rem;
+    border-color: blue;
+    font-size: 1.2rem;
+    color: #000000;
+    border-radius: 16px; 
+}
+
 .cat-buttons{
     display: flex; 
     justify-content: center; 
     gap: 20px; 
+}
+
+footer{
+    display: block;
+    color: #000000; 
+    text-align: center;
+    margin: 32px 100px 0 100px; 
+    border-top: 1px solid grey;
+    padding: 8px;  
+    font-family: poppins;
+    font-weight: 300;  
+    font-size: 12px;
 }
 
 
@@ -300,23 +359,23 @@ p, li{
     <!-- Navbar -->
    <header class="navbar container" style="margin-right: 0px; margin-left: 0px;">
 
-    <nav class="navbar-container">
-        <a href="../index.html"  ><img  class="logo" src="../assets/images/logo.png" alt="logo" height="70" ></a>
-        <div class="links">
-            <ul class="link-item navigation-items">
+        <nav class="navbar-container">
+            <a href="../index.html"  ><img  class="logo" src="../assets/images/logo.png" alt="logo" height="70" ></a>
+            <div class="links">
+                <ul class="link-item navigation-items" id="navigation-items">
 
-                <li><a href="./about me.html">About Me</a> </li>
-                <li class="resume" style="border-bottom: 4px solid;">Resume</li>
-                <li>Portfolio</li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
+                    <li><a href="./about me.html">About Me</a> </li>
+                    <li class="resume" style="border-bottom: 4px solid;">Resume</li>
+                    <li>Portfolio</li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
 
-            <div class="hamburger">
-                <span id="openHam">&#9776</span>
-                <span id="closeHam">&#x2716</span>
-            </div>
-        </div>  
-    </nav>
+                <div class="hamburger">
+                    <span id="openHam">&#9776</span>
+                    <span id="closeHam">&#x2716</span>
+                </div>
+            </div>  
+        </nav>
         
     </header> 
 
@@ -448,7 +507,7 @@ p, li{
                     <h4 class="technical">Technical</h4>
                     <ul class="tech-skills">
                         <li>Fiber Optics Engineering</li>
-                        <li>Telecomm. Infrastructure maintenance</li>
+                        <li>Telecomm. Infrastructure<br> maintenance</li>
                         <li>Optical Network Assurance</li>
                         <li>User Interface (UI) Design</li>
                         <li>User Experience (UX) Research</li>
@@ -461,23 +520,43 @@ p, li{
                 <div class="software">
                         <h4 class="soft-skills">Software Skills</h4>
                         <div class="software-icons">
-                            <img src="../assets/images/autodesk-revit.svg" alt="revit logo" height="70">  
+                            <div class="revit">
+                               <img src="../assets/images/autodesk-revit.svg" alt="revit logo" height="70">  
+                            </div>
+                             
+                            <div class="max">
+                                <img src="../assets/images/3ds-max-full.svg" alt="3dsmax logo" height="35"> 
+                            </div>
+                               
+
+                            <div class="autocad">
+                                <img src="../assets/images/AutoCAD.png" alt="AutoCAD logo" height="70">  
+                            </div>
                             
-                            <img src="../assets/images/3ds-max-full.svg" alt="3dsmax logo" height="35">    
-
-                            <img src="../assets/images/AutoCAD.png" alt="AutoCAD logo" height="70">  
-
-                            <img src="../assets/images/corona.png" alt="corona logo" height="30"> 
+                            <div class="corona">
+                               <img src="../assets/images/corona.png" alt="corona logo" height="30">  
+                            </div>
                             
-                            <img src="../assets/images/figma.svg" alt="figma logo" height="35"> 
-
-                            <img src="../assets/images/html.svg" alt="html logo" height="40">  
-
-                            <img src="../assets/images/css.svg" alt="css logo" height="40">    
-
-                            <img src="../assets/images/PS.svg" alt="photoshop logo" height="35">  
-
-                            <img src="../assets/images/Ai.svg" alt="illustrator logo" height="35"> 
+                            <div class="figma">
+                                <img class="figma" src="../assets/images/figma.svg" alt="figma logo" height="35"> 
+                            </div>
+                            
+                            <div class="html">
+                                <img src="../assets/images/html.svg" alt="html logo" height="40"> 
+                            </div>
+                             
+                            <div class="css">
+                                <img src="../assets/images/css.svg" alt="css logo" height="40">  
+                            </div>
+                              
+                            <div class="photoshop">
+                               <img class="ps" src="../assets/images/PS.svg" alt="photoshop logo" height="35">  
+                            </div>
+                             
+                            <div class="illustrator">
+                                <img src="../assets/images/Ai.svg" alt="illustrator logo" height="35"> 
+                            </div>
+                            
 
                             
 
@@ -653,7 +732,7 @@ p, li{
             <div class="food">
                 <h4 class="ref-name" style="color: orangered; margin: 0px;">Daniel Oladayo</h4>  
                 <b><p class="ref-position" style="margin-top: 5px; margin-bottom: 0px;">Food & Beverages Manager</p></b>  
-                <p class="ref-company" style="margin-top: 0px; margin-bottom: 0px;">Omega Restaurants</p>
+                <p class="ref-company" style="margin-top: 0px; margin-bottom: 0px;">Omega Restaurants, Dubai, UAE</p>
                 <p class="ref-phone" style="margin-top: 0px;">+971 00 000 000 0000</p>    
             </div>
         </div> 
@@ -669,6 +748,9 @@ p, li{
     
     
 
-
+    <footer>Copyright &copy; 2024</footer>  
+    
+    <script src="../index.js"></script> 
 </body>
+
 </html>

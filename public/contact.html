@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innocent Nweke contact page</title>
 
-    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="../style.css">
+    
+    <link rel="stylesheet" media="(max-width: 800px)" href="./style-mobile.css">  
 
     <style>
         .body-container{
-            display: grid; 
+            display: flex; 
+            justify-content: space-between; 
             width: auto;  
-            grid-template-columns: 2fr 1fr; 
+            
             gap: 100px; 
             margin-left: 50px;
             margin-right: 0px; 
              
-           
+        }
+
+        .navbar{
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
         }
 
         /* form styling */
@@ -25,7 +33,7 @@
             display: flex; 
             flex-direction: column;
             gap: 20px;    
-            margin-top: 0px; 
+            margin-top: 16px;  
             margin-bottom: 130px;    
             padding-left: 50px; 
             padding-right: 50px; 
@@ -33,7 +41,7 @@
         }
 
         .call-word{
-            font-size: 4rem;  
+            font-size: 3rem;   
             font-family: chonburi;
             color: whitesmoke;
         }
@@ -41,6 +49,7 @@
         .name{
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
             gap: 5px; 
         }
 
@@ -111,14 +120,15 @@
         .submit {
             display: flex;
             width: 30%;
-            height: 80px;  
-            border-radius: 32px;     
+            height: 64px;  
+            border-radius: 16px;      
             align-items: center;
             justify-content: space-around; 
             font-family: poppins;
             font-size: 1rem;  
             border: 0px;   
             background-color: #000093;
+            margin-top: 16px; 
         }
 
         .submit:hover{
@@ -231,18 +241,30 @@
 <body>
     <!-- Header section: Containing the Nav Bar -->
 
-    <div class="navbar container"><a href="../index.html"><img src="../assets/images/logo.png" alt="logo" height="70" style="margin-left: 20px;"> </a>
+    <header class="navbar container">
+        <nav>
+            <div class="logo-container">
+                <a href="../index.html"><img src="../assets/images/logo.png" alt="logo" height="70" style="margin-left: 0;"> </a>
+            </div>
+            <div class="links">
+                <ul class="link-item" id="navigation-items">
+                    <li><a href="./about me.html">About Me</a></li>
+                    <li><a href="./resume.html">Resume</a></li>  
+                    <li>Portfolio</li>
+                    <li class="contact" style="border-bottom: 4px solid ;">Contact</li>
+                </ul>
+            </div> 
+
+            <div class="hamburger">
+                <span id="openHam">&#9776</span>
+                <span id="closeHam">&#x2716</span>
+            </div>
+
+        </nav>
+        
          
-        <div class="links">
-             <ul class="link-item">
-                
-                <li><a href="./about me.html">About Me</a></li>
-                <li><a href="./resume.html">Resume</a></li>  
-                <li>Portfolio</li>
-                <li class="contact" style="border-bottom: 4px solid ;">Contact</li>
-            </ul>
-        </div> 
-    </div>
+       
+    </header>
 
      <!-- container section: Containing the forms and contact details -->
 
@@ -250,16 +272,16 @@
         <div class="form">
             <h1 class="call-word">Lets Start a Project Together</h1>
             <div class="name">
-                <label class="name label" type="text" style="color: whitesmoke; font-family: poppins;">Name:</label> 
-                <input type="text" size="70%" class="nameField"  placeholder="Enter your full name:">
+                <label class="name label name-label"  type="text" style="color: whitesmoke; font-family: poppins;">Name:</label> 
+                <input class="namebox" type="text" size="70%" class="nameField"  placeholder="Enter your full name:">
             </div>
             <div class="email-field">
                 <label class="email-label" type="text" style="color: whitesmoke; font-family: poppins;">Email:</label> 
-                <input type="text" size="70%" class="emailField"  placeholder="Enter your email address:">
+                <input class="namebox" type="text" size="70%" class="emailField"  placeholder="Enter your email address:">
             </div>
             <div class="message">
                 <label class="message-label" type="text" style="color: whitesmoke; font-family: poppins;">Message:</label> 
-                <textarea type="text" size="70%" class="messageField"  placeholder="Type your message here......"></textarea>
+                <textarea type="text" size="70%" class="messageField"  placeholder="Type your message here......"></textarea> 
             </div>
             <button class="submit" style="text-align: center; color: whitesmoke;">Submit</button> 
         </div>
@@ -302,6 +324,8 @@
 
 
 
+     <script src="../index.js"></script>
 
+     <footer>Copyright &copy; 2024</footer>
 </body>
 </html>

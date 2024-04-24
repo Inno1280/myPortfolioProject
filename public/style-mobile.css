@@ -1,8 +1,10 @@
 
 @media (max-width: 800px)   {  
- 
-    body{
-        margin: 8px;
+    *, body{
+        padding: 0;
+        border: 0;
+        box-sizing: border-box; 
+
     }
 
     .header-section{
@@ -14,12 +16,20 @@
         border-right: 10px solid;  
     }
 
+    .navbar-container{
+        width: 100%; 
+        max-width: 800px; 
+        margin: 0!important;  
+    }
+
     .container{
         padding: 0px 8px 0px 8px; 
     }
 
     .logo{
         height: 50px;
+        padding: 0; 
+        margin: 0; 
     }
 
     .link-item > * {
@@ -27,14 +37,44 @@
     }
 
     .link-item > *:hover{
-        font-weight: medium;
-       
+        margin: 8px; 
+        background-color: whitesmoke;
+        font-size: large;
+        color: #000000; 
+        border-radius: 16px;
+        transition: 0.3s ease-in-out; 
     }
+
 
     .hamburger{
-        display: flex;
+        display: flex;  
     }
 
+    #closeHam{
+        display: none; 
+    }
+
+    #navigation-items {
+        display: none;  
+        flex-direction: column; 
+        align-items: center; 
+        position: absolute;
+        right: 0;
+        top: 60px; 
+       background-color: #1f1f1f;  
+        width: 100%; 
+        height: calc(100vh-60vh);
+        gap: 2vh; 
+        
+    }
+
+    #navigation-items >*:hover {
+        font-size: medium;
+        
+        text-align: center; 
+        margin: 8px; 
+    }
+    
     .name-section{
         display: flex;
         flex-direction: column; 
@@ -79,9 +119,9 @@
         justify-content: flex-start; 
         
         gap: 10px; 
-        border: 2px 0px 2px 0px solid red; 
+        border: 2px 0px 2px 0px solid; 
         border-left: 0px; 
-        width: 100%;
+        width: auto; 
         padding: 10px;     
     }
 
@@ -109,6 +149,7 @@
         display: flex;
         flex-direction: column; 
         gap: 20px;   
+        border: 0; 
     }
 
     .profile-text{
@@ -131,6 +172,7 @@
         text-align: center; 
        
     }
+
     .stars-container{
         display: flex;
         gap: 10px;  
@@ -140,37 +182,75 @@
     .skills{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        padding: 0px; 
+    }
+
+    .technical{
+        margin: 0; 
     }
     
     .tech-skills{
-        padding-left: 20px; 
-
+        padding-left: 10px; 
     }
 
     .software{
-        border: 2px solid red;
+        
         margin: 0; 
     }
 
     .software-icons{
+        width: auto; 
         display: grid;
-        grid-template-rows:repeat(3, auto);  
-        grid-template-columns: repeat(3, auto); 
+        grid-template-rows:repeat(4, auto);  
+        grid-template-columns: repeat(4, auto); 
         gap: 15px; 
-        border-radius: 2px solid red; 
+        padding: 0; 
+         
           
     }
 
-    
+    .autocad{
+        grid-area: 2 / 1 / 2 / 3; 
+    }
 
-    .interest-icons{
+    .corona{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+
+    /* Interests section */
+    .interests{
         display: flex;
-        gap: 30px;   
+        flex-direction: column;
+        margin: 0; 
+    }
+    .interest-icons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr);  
+        gap: 16px; 
         padding: 16px;  
         margin: 0px; 
-        width: 100%; 
     }
+
+    .certifications{
+        padding: 0px; 
+    }
+
+    .certs > ul{
+        padding: 0;
+    }
+
+    .right-side{
+
+        margin: 0;
+        padding: 0; 
+    }
+   .experience-list{
+        padding: 0px; 
+        border: 0px;  
+    }
+
 
     .games, .music, .exercise, .travel{
         display: flex;
@@ -178,7 +258,152 @@
         font-size: 16px;   
     }
 
+    .reference-container{
+        display: flex; 
+        flex-direction: column; 
+        width: auto;   
+        gap: 10px; 
+        margin: 0 8px 0 8px; 
+        border: 0.5px solid grey;  
+        padding: 0 24px 24px 24px; 
+    }
+
+    .references{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .ref-company, .ref-phone, .ref-position { 
+        font-size: 14px;  
+    }
+
+    .section-title{
+        font-size: 16px;   
+    }
+
+    .cat-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 24px;  
+        margin-bottom: 32px;     
+        height: 4rem;     
+
+    }
+
+    .jpeg{
+        height: 3rem;  
+        font-size: 16px; 
+        border: 2px solid blue;
+    }
+
+    .pdf{
+        height: 3rem;
+        font-size: 16px;
+    }
+
+    footer{
+        display: block;  
+        color: black; 
+        text-align: center;
+        margin-top: 64px; 
+        margin-left: 8px;
+        margin-right: 8px;  
+        border-top: 1px solid grey;
+        padding: 8px;  
+        font-family: poppins;
+        font-weight: 300;  
+        font-size: 12px;
+    }
+
+    /* Styles for the contact page */
+
+    .body-container{
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin: 8px 8px 8px 8px!important;   
+        gap: 0!important;   
+    }
+
+
+    .form{
+        display: flex; 
+        flex-direction: column;
+        gap: 20px!important;  
+        margin: 0; 
+        height: auto; 
+        border-radius: 16px!important;  
+        margin-bottom: 0!important;
+    }
+
+    .call-word{
+        font-size: 2rem!important;   
+    }
+
+    .name-label{
+        font-size: 1.1rem;   
+    }
+
+   .namebox{
+        size: 100%!important;  
+        
+        width: 100%;
+        height: 3.5rem;
+    } 
+
+    .messageField{
+        height: 8rem!important;  
+        width: 100%;  
+    }
+
+    .submit{
+        height: 3rem!important;   
+        width: 100%!important; 
+        margin-bottom: 40px; 
+    }
+
+    .details{
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        gap: 0px!important; 
+        padding-bottom: 0!important;  
+    }
+
+    .email, .Phone-section, .socials{
+        width: 100%;  
+        
+    }
+
+    .socials{
+        margin-bottom: 0!important; 
+    }
+
+    .social-links{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px!important;   
+    }
+
+    .email-section, .phone-no{
+        font-size: 0.9rem;
+    }
+
+    
+
+    footer{
+        margin: 0; 
+        color: whitesmoke;
+    }
+
+    .primary{
+        height: 4rem!important;   
+    }
 
     
     
 }
+
+
+
