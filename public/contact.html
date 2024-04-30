@@ -10,6 +10,10 @@
     <link rel="stylesheet" media="(max-width: 800px)" href="./style-mobile.css">  
 
     <style>
+
+        body{
+            margin: 0; 
+        }
         .body-container{
             display: flex; 
             justify-content: space-between; 
@@ -133,6 +137,7 @@
 
         .submit:hover{
             background-color: blue;
+            cursor: pointer;
         }
 
 
@@ -232,6 +237,17 @@
 
 
     </style>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+    publicKey: "irSFs4SORL7m8GPtM",
+    });
+    })();
+    </script>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,7 +260,7 @@
     <header class="navbar container">
         <nav>
             <div class="logo-container">
-                <a href="../index.html"><img src="../assets/images/logo.png" alt="logo" height="70" style="margin-left: 0;"> </a>
+                <a href="../index.html"><img class="logo-image" src="../assets/images/logo.png" alt="logo" height="70" style="margin-left: 0;"></a>
             </div>
             <div class="links">
                 <ul class="link-item" id="navigation-items">
@@ -269,22 +285,37 @@
      <!-- container section: Containing the forms and contact details -->
 
      <div class="body-container">
-        <div class="form">
+        <form class="form" id="contact-form">
             <h1 class="call-word">Lets Start a Project Together</h1>
+
+            <!-- Name field -->
             <div class="name">
                 <label class="name label name-label"  type="text" style="color: whitesmoke; font-family: poppins;">Name:</label> 
-                <input class="namebox" type="text" size="70%" class="nameField"  placeholder="Enter your full name:">
+                <input type="text" size="70%" class="nameField" class="input-group" id="namevalue" placeholder="Enter your full name:" required>
+                <span id="namevalue-error" style="margin: 5px;">This field is required!</span>
             </div>
+            <!-- email-field -->
             <div class="email-field">
                 <label class="email-label" type="text" style="color: whitesmoke; font-family: poppins;">Email:</label> 
-                <input class="namebox" type="text" size="70%" class="emailField"  placeholder="Enter your email address:">
+                <input type="text" size="70%" class="emailField" id="emailvalue"placeholder="Enter your email address:" required>
+                <span id="emailvalue-error" style="margin: 5px;"></span>
             </div>
+
+            <!-- Subject-field -->
+            <div class="subject-field">
+                <label class="subject-label" type="text" style="color: whitesmoke; font-family: poppins;">Subject:</label> 
+                <input type="text" size="70%" class="subjectField" id="subjectvalue"  placeholder="Subject:" required>
+                <span id="subjectvalue-error" style="margin: 5px;"></span>
+            </div>
+            
+            <!-- Message-field -->
             <div class="message">
                 <label class="message-label" type="text" style="color: whitesmoke; font-family: poppins;">Message:</label> 
-                <textarea type="text" size="70%" class="messageField"  placeholder="Type your message here......"></textarea> 
+                <textarea type="text" size="70%" class="messageField" id="messagevalue"  placeholder="Type your message here......" required></textarea> 
+                <span id="messagevalue-error" style="margin: 5px;"></span>
             </div>
-            <button class="submit" style="text-align: center; color: whitesmoke;">Submit</button> 
-        </div>
+            <button class="submit" id="submit-button" style="text-align: center; color: whitesmoke;">Submit</button> 
+        </form> 
 
         <div class="details">
             <img class="profile-pics" src="../assets/images/me2.jpg" height="150" width="150"   alt="profile-pics">    

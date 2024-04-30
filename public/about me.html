@@ -60,7 +60,6 @@ a{
     background-color: black;
     color: whitesmoke;
     height: 70px;   
-    padding: 8px;
     margin: 0px;
     
 }
@@ -141,7 +140,7 @@ a{
         justify-content: space-between;
         align-items: center;
         margin: 0;
-        padding: 8px;  
+        padding-right: 8px;  
     }
 
     #navigation-items{
@@ -149,8 +148,16 @@ a{
         gap: 5px;
     }
 
-    .logo{
+    .container{
+        padding: 0; 
+        margin: 0; 
+    }
+
+    .logo-image {
         height: 50px; 
+        margin: 0; 
+        padding: 0; 
+        border: 2px solid red;
     }
 
     .hamburger #closeHam{
@@ -178,9 +185,13 @@ a{
     }
 
     #navigation-items >*:hover{
-        font-size: medium;
+        background-color: whitesmoke;
         width: 100%;
-        text-align: center;
+        text-align: center; 
+        color: #000000; 
+        border-radius: 16px; 
+        font-size: large; 
+        font-weight: 500;   
     }
 
     .text-copy{
@@ -243,11 +254,14 @@ footer{
     <header class="navbar container">
 
         <nav>
-            <a href="../index.html"><img class="logo" src="../assets/images/logo.png" height="70"> </a>   
+            <div class="logo-container">
+                <a href="../index.html"><img class="logo-image" src="../assets/images/logo.png" height="70"></a>  
+            </div>
+             
             <div class="links">
                 <ul class="link-item" id="navigation-items"> 
 
-                    <li style="border-bottom: 4px solid whitesmoke;  ">About Me</li>
+                    <li style="border-bottom: 4px solid whitesmoke;">About Me</li>
                     <li><a href="./resume.html">Resume</a></li> 
                     <li>Portfolio</li>
                     <li><a href="./contact.html">Contact</a></li> 
